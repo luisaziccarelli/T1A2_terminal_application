@@ -1,0 +1,17 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    artii (2.1.2)
+    colorize (0.8.1)
+    programmer_joke (0.0.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  artii (~> 2.1)
+  colorize (~> 0.8.1)
+  programmer_joke (~> 0.0.3)
+
+BUNDLED WITH
+   2.0.2
