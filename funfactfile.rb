@@ -2,14 +2,19 @@
 
 require 'faker'
 
+puts "Hey there, would you like to hear a Shakespeare quote?"
+answer = gets.chomp.to_s
 
-puts "Hey there, would you like to learn a fun fact today?"
-   user_input = gets.chomp.to_s
-def funfact
-options = ["yes", "no"]
-    if user_input == yes
-    puts Faker::TvShows::Friends.character #=> "Rachel Green"
-    else 
-    puts "no worries"
-end 
-end 
+puts Faker::Quotes::Shakespeare.as_you_like_it_quote 
+
+loop do
+    puts "Do you want another one?"
+    answer = gets.chomp
+    if answer == "yes"
+        puts Faker::Quotes::Shakespeare.as_you_like_it_quote 
+    elsif answer != "yes" 
+        puts "Ok, bye!"
+    break
+    end
+  end
+
