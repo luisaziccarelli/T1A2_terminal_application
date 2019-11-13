@@ -22,7 +22,7 @@ Most people these days struggle to find the time to the time to come up with new
 
 Target audience is anyone looking for new ideas on recipes they can make when they only have a few ingredients at hand and limited time to go to the shops. 
 
-•	Explain How a member of the target audience will use it
+•	Explain how a member of the target audience will use it
 
 The user would be asked input about what ingredients they have at hand and also about the meal they are looking to make (dietary restrictions). The program will output the a recipe that matches their input. 
 
