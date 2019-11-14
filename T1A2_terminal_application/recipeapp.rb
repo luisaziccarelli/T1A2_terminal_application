@@ -1,27 +1,32 @@
 # recipe app 
 
 #List of ingredients 
-
 food = [ "bread", "milk" , "cheese" , "apples" , "carrot" , "steak" , "pasta" ] 
 
 #dietary restrictions
-
-diet = [ "vegan", "gluten free", "non vegan", "non gluten free" ]
+diet = [ "vegan", "gf" ]
 
 #array with hashes that contain the recipes
 
+puts "You have bread, milk, cheese, apples, carrot, steak, pasta in your kitchen"
 
-puts "Which of these items in your kitchen: bread, milk, cheese, apples, carrot, steak, pasta?"
-user = gets.chomp.to_s
+puts "Are you vegan? Type y for yes or n for no"
+vegan = gets.chomp.to_s
 
-puts "Are you vegan?"
-user = gets.chomp.to_s
+if vegan 
+    puts "you are vegan"
+else
+    puts "you are not vegan"
+end 
 
-puts "Are you gluten-free?"
-user = gets.chomp.to_s
-
-
-
+puts "Are you gluten-free> Type y for yes or n for no"
+gf = gets.chomp.to_s
+ 
+if gf 
+    puts "you are gluten free"
+else
+    puts "you are not gluten free"
+end 
 
 
 recipes = [
@@ -53,4 +58,3 @@ recipes = [
 ]
 
 
-puts recipes[0][:name]
