@@ -1,4 +1,4 @@
-# recipe app 
+# Recipe app 
 
 #List of ingredients 
 food = [ "bread", "milk" , "cheese" , "apples" , "carrot" , "steak" , "pasta" ] 
@@ -13,16 +13,16 @@ puts "You have bread, milk, cheese, apples, carrot, steak, pasta in your kitchen
 puts "Are you vegan? Type y for yes or n for no"
 vegan = gets.chomp.to_s
 
-if vegan 
+if vegan == "y"  
     puts "you are vegan"
 else
     puts "you are not vegan"
 end 
 
-puts "Are you gluten-free> Type y for yes or n for no"
+puts "Are you gluten free? Type y for yes or n for no"
 gf = gets.chomp.to_s
  
-if gf 
+if gf  == "y"  
     puts "you are gluten free"
 else
     puts "you are not gluten free"
