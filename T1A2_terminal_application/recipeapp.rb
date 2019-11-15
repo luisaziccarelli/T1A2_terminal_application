@@ -79,7 +79,13 @@ end
 i = 0
 
 while (i < recipes.length)
-    puts recipes[i][:name]
-     i += 1
+    if (vegan == "y")
+        if !recipes[i].has_key?(:non_vegan)
+            puts recipes[i][:name]
+        end
+    elsif 
+    end
+     
+    i += 1
 end
 
