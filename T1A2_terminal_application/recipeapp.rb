@@ -79,16 +79,18 @@ end
 i = 0
 
 while (i < recipes.length)
-    if (vegan == "y")
+    if (vegan == "y") && (gf == "y")
+        if !recipes[i].has_key?(:non_vegan) && !recipes[i].has_key?(:non_gf)
+            puts recipes[i][:name]
+        end
+    elsif (vegan == "y")
         if !recipes[i].has_key?(:non_vegan)
             puts recipes[i][:name]
         end
-   elsif (gf == "y")
+    elsif (gf == "y")
         if !recipes[i].has_key?(:non_gf)
             puts recipes[i][:name]
         end
-  # elsif !recipes[i].has_key?(:non_gf, :non_vegan)
-   # puts recipes[i][:name]
     end
      
     i += 1
