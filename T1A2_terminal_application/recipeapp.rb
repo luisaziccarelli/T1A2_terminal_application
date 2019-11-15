@@ -45,25 +45,24 @@ vegan = gets.chomp.to_s
 puts "Are you gluten free? Type y for yes or n for no"
 gf = gets.chomp.to_s
 
-def yourdiet(a, b)
-    if a == true
-        return "your diet is #{a}"
-    elsif b == true
-        return "your diet is #{b}"
-    end 
+def yourdiet(vegan,gf)
+    
+    if vegan == "y"  
+        puts "you are vegan"
+     elsif  !vegan == "y"  
+        puts "you are not vegan" 
+     elsif gf  == "y"  
+        puts "you are gluten free"
+     elsif !gf  == "y"  
+        puts "you are not gluten free"
+     end
 end
 
-puts yourdiet("vegan", "gf")
+# begin rescue - error handling - just for the calling of the method 
 
-   # if vegan == "y"  
-   #     puts "you are vegan"
-    #elsif  !vegan == "y"  
-    #    puts "you are not vegan" 
-    #elsif gf  == "y"  
-     #   puts "you are gluten free"
-    #elsif !gf  == "y"  
-     #   puts "you are not gluten free"
-    #end
+puts yourdiet(vegan,gf)
+
+   
 
 
 # START METHOD 1
@@ -111,6 +110,10 @@ i = 0
 while (i < recipes.length)
     if (vegan == "y") && (gf == "y")
         if !recipes[i].has_key?(:non_vegan) && !recipes[i].has_key?(:non_gf)
+            puts recipes[i][:name]
+        end
+    elsif !(vegan == "y") && !(gf == "y")
+        if !recipes[i].has_key?(:vegan) && !recipes[i].has_key?(:gf)
             puts recipes[i][:name]
         end
     elsif (vegan == "y")
