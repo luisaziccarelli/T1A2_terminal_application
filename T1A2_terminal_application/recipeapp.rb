@@ -45,7 +45,7 @@ vegan = gets.chomp.to_s
 puts "Are you gluten free? Type y for yes or n for no"
 gf = gets.chomp.to_s
 
-def yourdiet(vegan,gf)
+def veganorgf (vegan,gf)
 
     if vegan == "y"  
         puts "you are vegan"
@@ -64,14 +64,29 @@ end
 
 
 begin
-    
-    yourdiet(vegan,gf)    
+    veganorgf(vegan,gf)    
 rescue TypeError
     puts "TypeError handled"
 end 
 
 #next steps is add a gem 
    
+def diet_combinations(vegan, gf)
+
+    if (vegan == "y") && (gf == "y")
+        puts "So you are both vegan and gf"
+    elsif (vegan == "n") && (gf == "n")
+        puts "So you are neither vegan or gluten free"
+    elsif (vegan == "y") && (gf == "n")
+        puts "So you are only vegan"
+    elsif (vegan == "n") && (gf == "y")
+        puts "So you are only gluten free"
+    else 
+        puts "you are just one of them"
+    end   
+end 
+
+diet_combinations(vegan, gf)
 
 # START METHOD 1
 #puts "Are you vegan? Type y for yes or n for no"
@@ -97,18 +112,18 @@ end
 # (vegan && gf) == "n"
 
 # if (vegan && gf) == "y"
-if (vegan == "y") && (gf == "y")
-    puts "So you are both vegan and gf"
-elsif (vegan == "n") && (gf == "n")
-    puts "So you are neither vegan or gluten free"
-elsif (vegan == "y") && (gf == "n")
-    puts "So you are only vegan"
-elsif (vegan == "n") && (gf == "y")
-    puts "So you are only gluten free"
+#if (vegan == "y") && (gf == "y")
+#    puts "So you are both vegan and gf"
+#elsif (vegan == "n") && (gf == "n")
+#    puts "So you are neither vegan or gluten free"
+#elsif (vegan == "y") && (gf == "n")
+#    puts "So you are only vegan"
+#elsif (vegan == "n") && (gf == "y")
+#    puts "So you are only gluten free"
     #puts recipes[2][:name]
-else 
-    puts "you are just one of them"
-end 
+#else 
+#    puts "you are just one of them"
+#end 
 
 #loop through the recipes array and print out the name of each recipe 
 
