@@ -46,7 +46,7 @@ puts "Are you gluten free? Type y for yes or n for no"
 gf = gets.chomp.to_s
 
 def yourdiet(vegan,gf)
-    
+
     if vegan == "y"  
         puts "you are vegan"
      elsif  !vegan == "y"  
@@ -58,12 +58,20 @@ def yourdiet(vegan,gf)
      end
 end
 
-# begin rescue - error handling - just for the calling of the method 
+# begin rescue here - error handling - just for the calling of the method not in the method
 
-puts yourdiet(vegan,gf)
+#puts yourdiet(vegan,gf)
 
+
+begin
+    
+    yourdiet(vegan,gf)    
+rescue TypeError
+    puts "TypeError handled"
+end 
+
+#next steps is add a gem 
    
-
 
 # START METHOD 1
 #puts "Are you vegan? Type y for yes or n for no"
