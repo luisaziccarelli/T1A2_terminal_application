@@ -1,6 +1,6 @@
 
 
-## ** My Recipe App ** 
+# **My Recipe App**
 
 
 # Contributor 
@@ -36,10 +36,10 @@ Gems:
     This program asks user inputs on whether they have any dietary restrictions. For the purpose of this program the dietary restrictions considered were: vegan and gluten free. 
     - Feature 3:  Recipe  
     This program will output a recipe or a Step-by-step cooking instructions on how-to make the given meal.
-    - Feature 4:  Prep time  
-    The program will also output an indication of the time it will take the user to make the meal.
-
+   
 - Addional features: 
+ - Feature 4:  Prep time  
+    The program will also output an indication of the time it will take the user to make the meal.
     - Feauture 5:  Type of meal (Breakfast, Lunch, Dinner) 
     Whether the user wants to make breakfast, lunch, or dinner.
     - Feature 6: Servings 
@@ -69,9 +69,21 @@ https://drive.google.com/file/d/1r2MAMTzTt3r9_DnZiVpKsIW6irQ3uHyL/view?usp=shari
 
 # Implementation Plan
 
-|Feautures         | Checklist                        | Priority | Deadline |
-|---               |---                               |---       |---       |
-| Main Ingredients | Get user input                   |   High   |  15/11   |
-|                  | Create variable with user input  |          |          |
-|                  | Create a method                  |          |          |
+|Feautures           | Checklist                                         | Priority | Deadline    |
+|---                 |---                                                |---       |---          |
+| Main Ingredients   | Get user input                                    |   High   |  15/11/19   |
+|                    | Create variable with user input                   |          |             |
+|                    | Create a method                                   |          |             |
+|Dietary Restrictions| Ask input  (vegan, gf)                            |   High   |  15/11/19   |    
+|                    | Get input                                         |          |             |
+|                    | Create method that outputs their diet restriction |          |             |
+|                    | Create method that outputs possible combinations  |          |             |
+|Recipes             | Create array of hashes with recipes               |   High   |  16/11/19   | 
+|                    | Create a loop to loop over array of hashes        |          |             |
+|                    | Create a method                                   |          |             |
+|                    | Add a gem                                         |          |             |
+|Help, test, ARGV    | Error handling with exceptions                    |  Medium  |  19/11/19   |
+|                    | Create ARGV variable                              |          |             |
+|                    | Create bash script                                |          |             |
+
 
