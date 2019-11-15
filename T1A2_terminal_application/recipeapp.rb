@@ -69,7 +69,7 @@ elsif (vegan == "y") && (gf == "n")
     puts "So you are only vegan"
 elsif (vegan == "n") && (gf == "y")
     puts "So you are only gluten free"
-    puts recipes[2][:name]
+    #puts recipes[2][:name]
 else 
     puts "you are just one of them"
 end 
@@ -83,10 +83,12 @@ while (i < recipes.length)
         if !recipes[i].has_key?(:non_vegan)
             puts recipes[i][:name]
         end
-   elsif !recipes[i].has_key?(:non_gf)
-    puts recipes[i][:name]
-   elsif !recipes[i].has_key?(:non_gf, :non_vegan)
-    puts recipes[i][:name]
+   elsif (gf == "y")
+        if !recipes[i].has_key?(:non_gf)
+            puts recipes[i][:name]
+        end
+  # elsif !recipes[i].has_key?(:non_gf, :non_vegan)
+   # puts recipes[i][:name]
     end
      
     i += 1
