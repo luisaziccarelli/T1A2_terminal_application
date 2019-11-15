@@ -1,5 +1,12 @@
 # Recipe app 
 
+require 'colorize'
+
+require 'artii'
+
+a = Artii::Base.new :font => 'slant'
+puts a.asciify("My Recipe App").colorize(:light_blue)
+
 #List of ingredients 
 food = [ "bread", "milk" , "cheese" , "apples" , "carrot" , "steak" , "pasta" ] 
 
@@ -138,19 +145,19 @@ i = 0
 while (i < recipes.length)
     if (vegan == "y") && (gf == "y")
         if !recipes[i].has_key?(:non_vegan) && !recipes[i].has_key?(:non_gf)
-            puts recipes[i][:name]
+            puts recipes[i][:name].colorize(:light_blue)
         end
     elsif !(vegan == "y") && !(gf == "y")
         if !recipes[i].has_key?(:vegan) && !recipes[i].has_key?(:gf)
-            puts recipes[i][:name]
+            puts recipes[i][:name].colorize(:light_blue)
         end
     elsif (vegan == "y")
         if !recipes[i].has_key?(:non_vegan)
-            puts recipes[i][:name]
+            puts recipes[i][:name].colorize(:light_blue)
         end
     elsif (gf == "y")
         if !recipes[i].has_key?(:non_gf)
-            puts recipes[i][:name]
+            puts recipes[i][:name].colorize(:light_blue)
         end
     end
      
