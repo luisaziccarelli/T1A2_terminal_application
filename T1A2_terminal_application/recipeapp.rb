@@ -40,6 +40,7 @@ recipes = [
 
 puts "You have bread, milk, cheese, apples, carrot, steak, pasta in your kitchen"
 
+# START METHOD 1
 puts "Are you vegan? Type y for yes or n for no"
 vegan = gets.chomp.to_s
 
@@ -57,6 +58,8 @@ if gf  == "y"
 else
     puts "you are not gluten free"
 end 
+# END METHOD 1
+
 
 # (vegan && gf) == "n"
 
@@ -76,6 +79,7 @@ end
 
 #loop through the recipes array and print out the name of each recipe 
 
+# START METHOD 2
 i = 0
 
 while (i < recipes.length)
@@ -95,4 +99,4 @@ while (i < recipes.length)
      
     i += 1
 end
-
+# END METHOD 2
