@@ -2,6 +2,7 @@
 
 # **My Recipe App**
 
+A basic cooking program that gives you recipe options based on items you have available and your diet restrictions.
 
 # Contributor 
 
@@ -15,8 +16,11 @@ https://github.com/luisaziccarelli/T1A2_terminal_application.git
 
 # Dependencies
 
-ruby 2.6.3p62 (2019-04-16 revision 67580) [x86_64-darwin15]
-Gems: 
+- ruby 2.6.3p62 
+- Colorize Gem
+git@github.com:fazibear/colorize.git
+- ASCII Artii 
+git@github.com:miketierney/artii.git
 
 # Statement and Scope: 
 
