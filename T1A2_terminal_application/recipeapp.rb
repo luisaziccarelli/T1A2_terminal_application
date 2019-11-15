@@ -35,29 +35,55 @@ recipes = [
     }
 ]
 
-
 #array with hashes that contain the recipes
 
 puts "You have bread, milk, cheese, apples, carrot, steak, pasta in your kitchen"
 
-# START METHOD 1
 puts "Are you vegan? Type y for yes or n for no"
 vegan = gets.chomp.to_s
 
-if vegan == "y"  
-    puts "you are vegan"
-else
-    puts "you are not vegan"
-end 
-
 puts "Are you gluten free? Type y for yes or n for no"
 gf = gets.chomp.to_s
+
+def yourdiet(a, b)
+    if a == true
+        return "your diet is #{a}"
+    elsif b == true
+        return "your diet is #{b}"
+    end 
+end
+
+puts yourdiet("vegan", "gf")
+
+   # if vegan == "y"  
+   #     puts "you are vegan"
+    #elsif  !vegan == "y"  
+    #    puts "you are not vegan" 
+    #elsif gf  == "y"  
+     #   puts "you are gluten free"
+    #elsif !gf  == "y"  
+     #   puts "you are not gluten free"
+    #end
+
+
+# START METHOD 1
+#puts "Are you vegan? Type y for yes or n for no"
+#vegan = gets.chomp.to_s
+
+#if vegan == "y"  
+#    puts "you are vegan"
+#else
+#    puts "you are not vegan"
+#end 
+
+#puts "Are you gluten free? Type y for yes or n for no"
+#gf = gets.chomp.to_s
  
-if gf  == "y"  
-    puts "you are gluten free"
-else
-    puts "you are not gluten free"
-end 
+#if gf  == "y"  
+#    puts "you are gluten free"
+#else
+#    puts "you are not gluten free"
+#end 
 # END METHOD 1
 
 
