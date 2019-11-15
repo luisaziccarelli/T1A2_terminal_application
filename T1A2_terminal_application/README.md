@@ -1,6 +1,6 @@
 
 
-** My Recipe App ** 
+## ** My Recipe App ** 
 
 
 # Contributor 
@@ -22,68 +22,56 @@ Gems:
 
 •   My Recipe App is a CLI application written in Ruby, which can be easily run on the command line. This app aims to help users find recipes based on items or ingredients they have available in their kitchen. 
 
-•	Most people these days struggle to find the time to the time to come up with new ideas or recipes, let alone do a proper grocery shop. Devs are no exception. 
+•	Most of us these days struggle to find the time to the time to come up with new ideas or recipes, let alone do a proper grocery shop. Devs are no exception. 
 
-•	Target audience for this app is anyone looking for new ideas on recipes they can make when they only have a few ingredients at hand and limited time to go to the shops. 
+•	Target audience for this app is anyone looking for new ideas on recipes they can make when they only have a few ingredients at hand and limited time to go shopping. 
 
 •   The user would be asked input about what ingredients they have at hand and also about the meal they are looking to make (dietary restrictions). The program will output the a recipe that matches their input. 
 
 # Features
 - Key features: 
-    - Feature 1:  ** Main ingredients ** 
+    - Feature 1: Main ingredients 
     The program starts by asking input from the user on the items of food the user has available in their kitchen. 
-    - Feature 2: ** Dietary restrictions ** 
+    - Feature 2:  Dietary restrictions 
     This program asks user inputs on whether they have any dietary restrictions. For the purpose of this program the dietary restrictions considered were: vegan and gluten free. 
-    - Feature 3: ** Recipe ** 
+    - Feature 3:  Recipe  
     This program will output a recipe or a Step-by-step cooking instructions on how-to make the given meal.
-    - Feature 4: ** Prep time ** 
+    - Feature 4:  Prep time  
     The program will also output an indication of the time it will take the user to make the meal.
 
 - Addional features: 
-    - Feauture 5: ** Type of meal (B, L , D) ** 
+    - Feauture 5:  Type of meal (Breakfast, Lunch, Dinner) 
     Whether the user wants to make breakfast, lunch, or dinner.
-    - Feature 6: ** Servings ** 
+    - Feature 6: Servings 
     Number of people the recipe would feed.
-    - Feature 7: ** Tools needed **
+    - Feature 7:  Tools needed 
     The type of cooking tools the user would need to use in order to prepare the meal such as: saucepan. 
-    - Feature 8 ** Extra ingredients ** 
+    - Feature 8: Extra ingredients  
     Additional ingredients other than the main ingredients that the user could have to implement the recipe, such as: condiments. 
 
 # User Interaction Experience 
 
-- Users will be asked a series of questions. For example: 
+- The program will prompt users to answer a series of questions, including: ingredients they have in their kitchen as well as their dietary restrictions. Nowadays there is a wide range of dietary restrictions and preferences, for instance vegetarian, pescatarian, etc. However for the purpose of this program the user will be given only two options in terms of dietary restrictions: vegan and/or gluten free.
 
-#Ask user input on what they have in their fridge or shopping bag? 
+- The program will get input from the users on these two key features, their available food items and their dietary restrictions as mentioned above. The program will store this information into variables to use it later. 
 
-“Type a list of the ingredients you have available in your fridge”
-
-- Users will be prompted to provide input by typing answers to a series of questions. For example: 
-
-#Ask user input on what they have in their fridge or shopping bag? 
-
-o=“Type a list of the ingredients you have available in your fridge”
-
-#Input from user
-
-i= spinach, chicken, tomatoes
-
-#Ask user input on any dietary restrictions 
-
-o= “Do you have any dietary restrictions? (for example: vegan, vegetarian, gluten-free))
-
-#Input from user 
-
-i= vegan 
+- The program will manipulate the variables and output a list of recipes that meet the main ingredients the user has available as well as their dietary restrictions. The recipes will include: name of the recipe, preparation time, and instructions on how to make the meal. 
 
 # Error Handling
 
+- When getting user input we could expect some errors will occur. For example typing errors or entering a variable value that does not exist within our program. These erros will be handled by using exceptions. 
 
 # Control Flow Diagram
 
+- The control flow diagram below represents the control flow for this application. 
 
+https://drive.google.com/file/d/1r2MAMTzTt3r9_DnZiVpKsIW6irQ3uHyL/view?usp=sharing
 
 # Implementation Plan
-|Feautures| Checklist | Priority | Deadline |
-|---      |---        |---       |---       |
-|         |           |          |          |
-|         |           |          |          |
+
+|Feautures         | Checklist                        | Priority | Deadline |
+|---               |---                               |---       |---       |
+| Main Ingredients | Get user input                   |   High   |  15/11   |
+|                  | Create variable with user input  |          |          |
+|                  | Create a method                  |          |          |
+
