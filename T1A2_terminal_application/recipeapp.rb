@@ -7,35 +7,8 @@ food = [ "bread", "milk" , "cheese" , "apples" , "carrot" , "steak" , "pasta" ]
 diet = [ "vegan", "gf" ]
 
 
-recipes = [
-    {
-        :name => "steak sandwich", 
-        :non_vegan => "steak", 
-        :non_gf => "bread"
-    },
-    {
-        :name => "cheese" "carrot" "pasta", 
-        :non_vegan => "cheese + carrot", 
-        :non_gf => "pasta"
-    },
-    {
-        :name => "cheese steak",  
-        :non_vegan => "cheese", 
-        :gf => "steak"
-    },
-    {
-        :name => "apple sandwich", 
-        :vegan => "apple", 
-        :non_gf => "bread"
-    },
-    {
-        :name => "apple carrot salad", 
-        :vegan => "apple", 
-        :gf => "carrot" 
-    }
-]
-
 #array with hashes that contain the recipes
+
 
 puts "You have bread, milk, cheese, apples, carrot, steak, pasta in your kitchen"
 
@@ -64,7 +37,7 @@ end
 
 
 begin
-    veganorgf(vegan,gf)    
+    puts veganorgf(vegan,gf)    
 rescue TypeError
     puts "TypeError handled"
 end 
@@ -127,7 +100,39 @@ diet_combinations(vegan, gf)
 
 #loop through the recipes array and print out the name of each recipe 
 
+
+
 # START METHOD 2
+def choiceofrecipe(vegan, gf)   
+
+    recipes = [
+        {
+            :name => "steak sandwich", 
+            :non_vegan => "steak", 
+            :non_gf => "bread"
+        },
+        {
+            :name => "cheese" "carrot" "pasta", 
+            :non_vegan => "cheese + carrot", 
+            :non_gf => "pasta"
+        },
+        {
+            :name => "cheese steak",  
+            :non_vegan => "cheese", 
+            :gf => "steak"
+        },
+        {
+            :name => "apple sandwich", 
+            :vegan => "apple", 
+            :non_gf => "bread"
+        },
+        {
+            :name => "apple carrot salad", 
+            :vegan => "apple", 
+            :gf => "carrot" 
+        }
+    ]  
+
 i = 0
 
 while (i < recipes.length)
@@ -151,4 +156,8 @@ while (i < recipes.length)
      
     i += 1
 end
+end 
+
+puts choiceofrecipe(vegan, gf)
+
 # END METHOD 2
