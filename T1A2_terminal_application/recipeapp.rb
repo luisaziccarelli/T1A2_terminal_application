@@ -28,33 +28,62 @@ else
     puts "you are not gluten free"
 end 
 
+# (vegan && gf) == "n"
+
+# if (vegan && gf) == "y"
+if (vegan == "y") && (gf == "y")
+    puts "So you are both vegan and gf"
+elsif (vegan == "n") && (gf == "n")
+    puts "So you are neither vegan or gluten free"
+elsif (vegan == "y") && (gf == "n")
+    puts "So you are only vegan"
+elsif (vegan == "n") && (gf == "y")
+    puts "So you are only gluten free"
+else 
+    puts "you are just one of them"
+end 
+
+#puts "Ok so we know what foods you have, pick which you want to be your main ingredient"
+#main_ingredient = gets.chomp
+
 
 recipes = [
     {
         :name => "steak sandwich", 
         :non_vegan => "steak", 
-        :non_gluten_free => "bread"
+        :non_gf => "bread"
     },
     {
-        :name => "carrot sandwich", 
-        :vegan => "carrot", 
-        :non_gluten_free => "bread"
+        :name => "cheese-carrot pasta", 
+        :non_vegan => "cheese-carrot", 
+        :non_gf => "pasta"
     },
     {
         :name => "cheese steak",  
         :non_vegan => "cheese", 
-        :gluten_free => "steak"
+        :gf => "steak"
     },
     {
-        :name => "cheese sandwich", 
-        :non_vegan => "cheese", 
-        :non_gluten_free => "bread"
+        :name => "apple sandwich", 
+        :vegan => "apple", 
+        :non_gf => "bread"
     },
     {
         :name => "apple carrot salad", 
         :vegan => "apple", 
-        :gluten_free => "carrot" 
+        :gf => "carrot" 
     }
 ]
+
+
+
+
+#function 
+#if vegan puts vegan recipe 
+#if gf puts gf recipe
+#if vegan and gf puts vegan and gf recipe - 
+#if n-vegan and gf puts n-vegan gf recipe -  - 
+#if vegan and non-gf puts v-non gf recipe - 
+#if n-v and n-gf puts n-v and n-gf recipe - 
 
 
