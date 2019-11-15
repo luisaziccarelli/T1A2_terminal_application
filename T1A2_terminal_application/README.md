@@ -3,15 +3,15 @@
 ** My Recipe App ** 
 
 
-
-
 # Contributor 
 
-@luisaziccarelli is a student at Coder Academy, Sydney Campus. She has no prior tech background and this is her first terminal app using Ruby. 
+@luisaziccarelli is a student at Coder Academy, Sydney Campus. She has no prior tech background to this bootcamp and this is her first terminal app using Ruby. 
 
 # Installation Instructions
 
 - Click the link below and clone the Recipe App git repository to your local computer. You can find Clone or download green tab located on the right upper corner of the repository.
+
+https://github.com/luisaziccarelli/T1A2_terminal_application.git 
 
 # Dependencies
 
@@ -30,24 +30,24 @@ Gems:
 
 # Features
 - Key features: 
-    - Feature 1:  Main ingredients: 
+    - Feature 1:  ** Main ingredients ** 
     The program starts by asking input from the user on the items of food the user has available in their kitchen. 
-    - Feature 2: Dietary restrictions 
+    - Feature 2: ** Dietary restrictions ** 
     This program asks user inputs on whether they have any dietary restrictions. For the purpose of this program the dietary restrictions considered were: vegan and gluten free. 
-    - Feature 3: Recipe 
+    - Feature 3: ** Recipe ** 
     This program will output a recipe or a Step-by-step cooking instructions on how-to make the given meal.
-    - Feature 4: Prep time
+    - Feature 4: ** Prep time ** 
     The program will also output an indication of the time it will take the user to make the meal.
 
 - Addional features: 
-    - Feauture 5
-    Type of meal (B, L , D): whether the user wants to make breakfast, lunch, or dinner.
-    - Feature 6 
-    Number of people: number of people who would be having the meal. For instance a single person vs family.
-    - Feature 7 
-    Tools needed: the type of cooking tools the user would need to use in order to prepare the meal such as: saucepan. 
-    - Feature 8 
-    Extra ingredients: additional ingredients other than the main ingredients that the user could have to implement the recipe, such as: condiments. 
+    - Feauture 5: ** Type of meal (B, L , D) ** 
+    Whether the user wants to make breakfast, lunch, or dinner.
+    - Feature 6: ** Servings ** 
+    Number of people the recipe would feed.
+    - Feature 7: ** Tools needed **
+    The type of cooking tools the user would need to use in order to prepare the meal such as: saucepan. 
+    - Feature 8 ** Extra ingredients ** 
+    Additional ingredients other than the main ingredients that the user could have to implement the recipe, such as: condiments. 
 
 # User Interaction Experience 
 
@@ -83,7 +83,7 @@ i= vegan
 
 
 # Implementation Plan
-
-
-
-
+|Feautures| Checklist | Priority | Deadline |
+|---      |---        |---       |---       |
+|         |           |          |          |
+|         |           |          |          |
