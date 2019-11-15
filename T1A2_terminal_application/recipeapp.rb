@@ -6,6 +6,36 @@ food = [ "bread", "milk" , "cheese" , "apples" , "carrot" , "steak" , "pasta" ]
 #dietary restrictions
 diet = [ "vegan", "gf" ]
 
+
+recipes = [
+    {
+        :name => "steak sandwich", 
+        :non_vegan => "steak", 
+        :non_gf => "bread"
+    },
+    {
+        :name => "cheese" "carrot" "pasta", 
+        :non_vegan => "cheese + carrot", 
+        :non_gf => "pasta"
+    },
+    {
+        :name => "cheese steak",  
+        :non_vegan => "cheese", 
+        :gf => "steak"
+    },
+    {
+        :name => "apple sandwich", 
+        :vegan => "apple", 
+        :non_gf => "bread"
+    },
+    {
+        :name => "apple carrot salad", 
+        :vegan => "apple", 
+        :gf => "carrot" 
+    }
+]
+
+
 #array with hashes that contain the recipes
 
 puts "You have bread, milk, cheese, apples, carrot, steak, pasta in your kitchen"
@@ -39,51 +69,21 @@ elsif (vegan == "y") && (gf == "n")
     puts "So you are only vegan"
 elsif (vegan == "n") && (gf == "y")
     puts "So you are only gluten free"
+    puts recipes[2][:name]
 else 
     puts "you are just one of them"
 end 
 
-#puts "Ok so we know what foods you have, pick which you want to be your main ingredient"
-#main_ingredient = gets.chomp
+#loop through the recipes array and print out the name of each recipe 
 
+i = 0
 
-recipes = [
-    {
-        :name => "steak sandwich", 
-        :non_vegan => "steak", 
-        :non_gf => "bread"
-    },
-    {
-        :name => "cheese-carrot pasta", 
-        :non_vegan => "cheese-carrot", 
-        :non_gf => "pasta"
-    },
-    {
-        :name => "cheese steak",  
-        :non_vegan => "cheese", 
-        :gf => "steak"
-    },
-    {
-        :name => "apple sandwich", 
-        :vegan => "apple", 
-        :non_gf => "bread"
-    },
-    {
-        :name => "apple carrot salad", 
-        :vegan => "apple", 
-        :gf => "carrot" 
-    }
-]
+while (i < recipes.length)
+    puts recipes[i]
+     i += 1
+end
 
-
-
-
-#function 
-#if vegan puts vegan recipe 
-#if gf puts gf recipe
-#if vegan and gf puts vegan and gf recipe - 
-#if n-vegan and gf puts n-vegan gf recipe -  - 
-#if vegan and non-gf puts v-non gf recipe - 
-#if n-v and n-gf puts n-v and n-gf recipe - 
-
+#recipes.each do |item|
+ #   puts item 
+  #end
 
