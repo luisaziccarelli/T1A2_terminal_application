@@ -79,11 +79,7 @@ end
 i = 0
 
 while (i < recipes.length)
-    puts recipes[i]
+    puts recipes[i][:name]
      i += 1
 end
-
-#recipes.each do |item|
- #   puts item 
-  #end
 
