@@ -34,23 +34,23 @@ git@github.com:miketierney/artii.git
 
 # Features
 - Key features: 
-    - Feature 1: Main ingredients 
+    - Feature 1: **Main ingredients**  
     The program starts by asking input from the user on the items of food the user has available in their kitchen. 
-    - Feature 2:  Dietary restrictions 
+    - Feature 2:  **Dietary restrictions**  
     This program asks user inputs on whether they have any dietary restrictions. For the purpose of this program the dietary restrictions considered were: vegan and gluten free. 
-    - Feature 3:  Recipe  
+    - Feature 3: **Recipe**  
     This program will output a recipe or a Step-by-step cooking instructions on how-to make the given meal.
    
 - Addional features: 
- - Feature 4:  Prep time  
+    - Feature 4:  **Prep time**  
     The program will also output an indication of the time it will take the user to make the meal.
-    - Feauture 5:  Type of meal (Breakfast, Lunch, Dinner) 
+    - Feauture 5:  **Type of meal**            
     Whether the user wants to make breakfast, lunch, or dinner.
-    - Feature 6: Servings 
+    - Feature 6: **Servings**     
     Number of people the recipe would feed.
-    - Feature 7:  Tools needed 
+    - Feature 7:  **Tools needed**    
     The type of cooking tools the user would need to use in order to prepare the meal such as: saucepan. 
-    - Feature 8: Extra ingredients  
+    - Feature 8: **Extra ingredients**  
     Additional ingredients other than the main ingredients that the user could have to implement the recipe, such as: condiments. 
 
 # User Interaction Experience 
