@@ -2,7 +2,7 @@
 
 # **My Recipe App**
 
-A basic cooking program that gives you recipe options based on items you have available and your diet restrictions.
+A basic recipe app that gives you recipe options based on items you have available and your diet restrictions.
 
 # **Contributor**
 
@@ -95,8 +95,8 @@ https://drive.google.com/file/d/1r2MAMTzTt3r9_DnZiVpKsIW6irQ3uHyL/view?usp=shari
 |                    | Create a loop to loop over array of hashes        |          |             |
 |                    | Create a method to print recipe                   |          |             |
 |                    | Add a gem                                         |          |             |
-|Help, test, ARGV    | Error handling with exceptions                    |  Medium  |  19/11/19   |
-|                    | Create ARGV array                                 |          |             |
+|Test, ARGV, bash    | Error handling with exceptions                    |  Medium  |  19/11/19   |
+|script              | Create ARGV array                                 |          |             |
 |                    | Create bash script                                |          |             |
 
  
