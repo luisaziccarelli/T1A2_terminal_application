@@ -91,13 +91,19 @@ diet_combinations(vegan, gf)
 
 
 # START METHOD 2
-def choiceofrecipe(vegan, gf)   
+ def choiceofrecipe(vegan, gf)   
 
     recipes = [
         {
             :name => "steak sandwich", 
             :non_vegan => "steak", 
-            :non_gf => "bread"
+            :non_gf => "bread",
+            :recipe => 
+"prep time: 20 min
+Instructions: 
+    - Make steak 
+    - Toast bread"
+
         },
         {
             :name => "cheese" "carrot" "pasta", 
@@ -131,14 +137,17 @@ while (i < recipes.length)
     elsif !(vegan == "y") && !(gf == "y")
         if !recipes[i].has_key?(:vegan) && !recipes[i].has_key?(:gf)
             puts "Your recipe is #{recipes[i][:name].colorize(:light_blue)}"
+            puts "#{recipes[i][:recipe].colorize(:light_blue)}"
         end
     elsif (vegan == "y")
         if !recipes[i].has_key?(:non_vegan)
             puts "Your recipe is #{recipes[i][:name].colorize(:light_blue)}"
+            puts "#{recipes[i][:recipe].colorize(:light_blue)}"
         end
     elsif (gf == "y")
         if !recipes[i].has_key?(:non_gf)
             puts "Your recipe is #{recipes[i][:name].colorize(:light_blue)}"
+            puts "#{recipes[i][:recipe].colorize(:light_blue)}"
         end
     end
      
