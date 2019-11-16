@@ -4,17 +4,18 @@
 
 A basic cooking program that gives you recipe options based on items you have available and your diet restrictions.
 
-# Contributor 
+# **Contributor**
 
 @luisaziccarelli is a student at Coder Academy, Sydney Campus. She has no prior tech background to this bootcamp and this is her first terminal app using Ruby. 
 
-# Installation Instructions
+# **Help** 
+## Installation Instructions
 
 - Click the link below and clone the Recipe App git repository to your local computer. You can find Clone or download green tab located on the right upper corner of the repository.
 
 https://github.com/luisaziccarelli/T1A2_terminal_application.git 
 
-# Dependencies
+## Dependencies 
 
 - ruby 2.6.3p62 
 - Colorize Gem
@@ -22,15 +23,22 @@ git@github.com:fazibear/colorize.git
 - ASCII Artii 
 git@github.com:miketierney/artii.git
 
-# Statement and Scope: 
+## System/Hardware Requirements
 
-•   My Recipe App is a CLI application written in Ruby, which can be easily run on the command line. This app aims to help users find recipes based on items or ingredients they have available in their kitchen. 
+There is no specific system/hardware requirement for this application.
 
-•	Most of us these days struggle to find the time to the time to come up with new ideas or recipes, let alone do a proper grocery shop. Devs are no exception. 
+# **Software development plan** 
 
-•	Target audience for this app is anyone looking for new ideas on recipes they can make when they only have a few ingredients at hand and limited time to go shopping. 
+# Statement and scope: 
 
-•   The user would be asked input about what ingredients they have at hand and also about the meal they are looking to make (dietary restrictions). The program will output the a recipe that matches their input. 
+•   My Recipe App is a CLI application written in Ruby, which can be easily run on the command line. There are a lot of recipe websites, pinterest, and other apps you can use to find new recipes. But with so many options out there this process can become rather overwhelming and time consuming. I wanted to create a basic app that would simplify this process for users and would help them find interesting recipes based on items or ingredients they have available in their kitchen. 
+
+•   Most of us these days struggle to find the time to plan ahead our shopping lists, let alone to come up with new ideas or recipes. Developers are no exception. So I have come up with an app that can take input on the items you already have and provide with recipe ideas to tackle this problem. 
+
+•   The target audience for this app is anyone looking for new ideas on recipes they can make when they only have a few ingredients at hand and limited time to go shopping. The user will need to have at least a few items of food available at hand. 
+
+•   The user would be asked input about what ingredients they have at hand and also about the meal they are looking to make (dietary restrictions). The program will output the recipe that matches their input. 
+
 
 # Features
 - Key features: 
@@ -75,19 +83,20 @@ https://drive.google.com/file/d/1r2MAMTzTt3r9_DnZiVpKsIW6irQ3uHyL/view?usp=shari
 
 |Feautures           | Checklist                                         | Priority | Deadline    |
 |---                 |---                                                |---       |---          |
-| Main Ingredients   | Get user input                                    |   High   |  15/11/19   |
+| Main Ingredients   | Print to screen                                   |   High   |  15/11/19   |
+|                    | Get user input                                    |          |             |
 |                    | Create variable with user input                   |          |             |
 |                    | Create a method                                   |          |             |
-|Dietary Restrictions| Ask input  (vegan, gf)                            |   High   |  15/11/19   |    
-|                    | Get input                                         |          |             |
+|Dietary Restrictions| Get input  (vegan, gf)                            |   High   |  15/11/19   |    
+|                    | Create variable with user input                   |          |             |
 |                    | Create method that outputs their diet restriction |          |             |
 |                    | Create method that outputs possible combinations  |          |             |
 |Recipes             | Create array of hashes with recipes               |   High   |  16/11/19   | 
 |                    | Create a loop to loop over array of hashes        |          |             |
-|                    | Create a method                                   |          |             |
+|                    | Create a method to print recipe                   |          |             |
 |                    | Add a gem                                         |          |             |
 |Help, test, ARGV    | Error handling with exceptions                    |  Medium  |  19/11/19   |
-|                    | Create ARGV variable                              |          |             |
+|                    | Create ARGV array                                 |          |             |
 |                    | Create bash script                                |          |             |
 
-
+ 
