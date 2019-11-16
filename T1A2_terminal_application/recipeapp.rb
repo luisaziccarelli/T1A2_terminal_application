@@ -1,4 +1,4 @@
-# Recipe app 
+# My Recipe App 
 
 require 'colorize'
 
@@ -8,22 +8,28 @@ a = Artii::Base.new :font => 'slant'
 puts a.asciify("My Recipe App").colorize(:light_blue)
 
 #List of ingredients 
-food = [ "bread", "milk" , "cheese" , "apples" , "carrot" , "steak" , "pasta" ] 
+#food = [ "bread", "milk" , "cheese" , "apples" , "carrot" , "steak" , "pasta" ] 
+
+#puts "You have bread, milk, cheese, apples, carrot, steak, pasta in your kitchen"
 
 #dietary restrictions
 diet = [ "vegan", "gf" ]
 
+puts "Welcome to My Recipe App! What is your name?"
+name = gets.chomp.to_s
 
-#array with hashes that contain the recipes
+puts "Hi, #{name}. This program gives you recipes that match the foods you have available in your kitchen. Let's get started!"
 
-
-puts "You have bread, milk, cheese, apples, carrot, steak, pasta in your kitchen"
+puts "What food do you have available in your kitchen? List main ingredients such as: chicken, pasta, etc."
+food_available = gets.chomp.to_s
 
 puts "Are you vegan? Type y for yes or n for no"
 vegan = gets.chomp.to_s
 
 puts "Are you gluten free? Type y for yes or n for no"
 gf = gets.chomp.to_s
+
+#START METHOD 1 
 
 def veganorgf (vegan,gf)
 
@@ -38,10 +44,8 @@ def veganorgf (vegan,gf)
      end
 end
 
-# begin rescue here - error handling - just for the calling of the method not in the method
-
+# begin rescue here 
 #puts yourdiet(vegan,gf)
-
 
 begin
     puts veganorgf(vegan,gf)    
@@ -49,7 +53,6 @@ rescue TypeError
     puts "TypeError handled"
 end 
 
-#next steps is add a gem 
    
 def diet_combinations(vegan, gf)
 
@@ -67,45 +70,6 @@ def diet_combinations(vegan, gf)
 end 
 
 diet_combinations(vegan, gf)
-
-# START METHOD 1
-#puts "Are you vegan? Type y for yes or n for no"
-#vegan = gets.chomp.to_s
-
-#if vegan == "y"  
-#    puts "you are vegan"
-#else
-#    puts "you are not vegan"
-#end 
-
-#puts "Are you gluten free? Type y for yes or n for no"
-#gf = gets.chomp.to_s
- 
-#if gf  == "y"  
-#    puts "you are gluten free"
-#else
-#    puts "you are not gluten free"
-#end 
-# END METHOD 1
-
-
-# (vegan && gf) == "n"
-
-# if (vegan && gf) == "y"
-#if (vegan == "y") && (gf == "y")
-#    puts "So you are both vegan and gf"
-#elsif (vegan == "n") && (gf == "n")
-#    puts "So you are neither vegan or gluten free"
-#elsif (vegan == "y") && (gf == "n")
-#    puts "So you are only vegan"
-#elsif (vegan == "n") && (gf == "y")
-#    puts "So you are only gluten free"
-    #puts recipes[2][:name]
-#else 
-#    puts "you are just one of them"
-#end 
-
-#loop through the recipes array and print out the name of each recipe 
 
 
 
@@ -145,19 +109,19 @@ i = 0
 while (i < recipes.length)
     if (vegan == "y") && (gf == "y")
         if !recipes[i].has_key?(:non_vegan) && !recipes[i].has_key?(:non_gf)
-            puts recipes[i][:name].colorize(:light_blue)
+            puts "Your recipe is #{recipes[i][:name].colorize(:light_blue)}"
         end
     elsif !(vegan == "y") && !(gf == "y")
         if !recipes[i].has_key?(:vegan) && !recipes[i].has_key?(:gf)
-            puts recipes[i][:name].colorize(:light_blue)
+            puts "Your recipe is #{recipes[i][:name].colorize(:light_blue)}"
         end
     elsif (vegan == "y")
         if !recipes[i].has_key?(:non_vegan)
-            puts recipes[i][:name].colorize(:light_blue)
+            puts "Your recipe is #{recipes[i][:name].colorize(:light_blue)}"
         end
     elsif (gf == "y")
         if !recipes[i].has_key?(:non_gf)
-            puts recipes[i][:name].colorize(:light_blue)
+            puts "Your recipe is #{recipes[i][:name].colorize(:light_blue)}"
         end
     end
      
@@ -167,4 +131,4 @@ end
 
 puts choiceofrecipe(vegan, gf)
 
-# END METHOD 2
+
