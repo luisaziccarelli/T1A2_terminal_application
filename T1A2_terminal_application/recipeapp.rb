@@ -9,8 +9,8 @@ puts a.asciify("My Recipe App").colorize(:light_blue)
 
 #List of ingredients 
 #food = [ "bread", "milk" , "cheese" , "apples" , "carrot" , "steak" , "pasta" ] 
-
 #puts "You have bread, milk, cheese, apples, carrot, steak, pasta in your kitchen"
+# array of food in recipes
 
 #dietary restrictions
 diet = [ "vegan", "gf" ]
@@ -20,14 +20,33 @@ name = gets.chomp.to_s
 
 puts "Hi, #{name}. This program gives you recipes that match the foods you have available in your kitchen. Let's get started!"
 
-puts "What food do you have available in your kitchen? List main ingredients such as: chicken, pasta, etc."
-food_available = gets.chomp.to_s
+puts "What food do you have available in your kitchen? List main ingredients such as: cheese, pasta, etc."
+main_ingredients = gets.chomp.to_s
 
 puts "Are you vegan? Type y for yes or n for no"
 vegan = gets.chomp.to_s
 
 puts "Are you gluten free? Type y for yes or n for no"
 gf = gets.chomp.to_s
+
+# Check if main ingredients are in ingredients in recipe
+
+def ingredientsmatch(main_ingredients)
+
+ingredients_in_recipes = [ "bread", "milk" , "cheese" , "apples" , "carrot" , "steak" , "pasta" ] 
+
+i = 0
+    for i in ingredients_in_recipes
+         if ingredients_in_recipes.include?(main_ingredients)
+             puts "Great, we might have some recipes to match your food"
+         else
+             puts "Sorry, I am afraid we o not have recipes available that match your food"
+         end
+         break
+     end  
+ end
+
+ puts ingredientsmatch(main_ingredients)
 
 #START METHOD 1 
 
@@ -45,10 +64,9 @@ def veganorgf (vegan,gf)
 end
 
 # begin rescue here 
-#puts yourdiet(vegan,gf)
 
 begin
-    puts veganorgf(vegan,gf)    
+    veganorgf(vegan,gf)    
 rescue TypeError
     puts "TypeError handled"
 end 
@@ -70,7 +88,6 @@ def diet_combinations(vegan, gf)
 end 
 
 diet_combinations(vegan, gf)
-
 
 
 # START METHOD 2
