@@ -118,7 +118,7 @@ Instructions:
 
         },
         {
-            :name => "cheese" "carrot" "pasta", 
+            :name => "cheese" + " " "carrot" + " " "pasta", 
             :non_vegan => "cheese + carrot", 
             :non_gf => "pasta",
             :recipe => 
@@ -132,17 +132,35 @@ Instructions:
         {
             :name => "cheese steak",  
             :non_vegan => "cheese", 
-            :gf => "steak"
+            :gf => "steak",
+            :recipe =>
+"prep time: 20 min
+Instructions: 
+- fry steak
+- add cheese"
+
         },
         {
             :name => "apple sandwich", 
             :vegan => "apple", 
-            :non_gf => "bread"
+            :non_gf => "bread",
+            :recipe =>
+"prep time: 20 min
+Instructions: 
+- peel apples
+- toast bread"
         },
         {
             :name => "apple carrot salad", 
             :vegan => "apple", 
-            :gf => "carrot" 
+            :gf => "carrot",
+            :recipe => 
+"prep time: 20 min
+Instructions: 
+- peel carrots
+- peel apples
+- mix" 
+
         }
     ]  
 
@@ -152,6 +170,7 @@ while (i < recipes.length)
     if (vegan == "y") && (gf == "y")
         if !recipes[i].has_key?(:non_vegan) && !recipes[i].has_key?(:non_gf)
             puts "Your recipe is #{recipes[i][:name].colorize(:light_blue)}"
+            puts "#{recipes[i][:recipe].colorize(:light_blue)}"
         end
     elsif !(vegan == "y") && !(gf == "y")
         if !recipes[i].has_key?(:vegan) && !recipes[i].has_key?(:gf)
