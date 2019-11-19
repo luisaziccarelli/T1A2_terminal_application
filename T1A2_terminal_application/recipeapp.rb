@@ -7,27 +7,31 @@ require 'artii'
 a = Artii::Base.new :font => 'slant'
 puts a.asciify("My Recipe App").colorize(:light_blue)
 
+
+
 #List of ingredients 
 #food = [ "bread", "milk" , "cheese" , "apples" , "carrot" , "steak" , "pasta" ] 
 #puts "You have bread, milk, cheese, apples, carrot, steak, pasta in your kitchen"
 # array of food in recipes
 
-#dietary restrictions
-diet = [ "vegan", "gf" ]
 
-puts "Welcome to My Recipe App! What is your name?"
-name = gets.chomp.to_s
+#Welcome message
+# #def greeting(name) 
+# name = ARGV 
+#     if ARGV.length < 2
+#      puts "Welcome #{ARGV[0]}. This is My Recipe App!"
+#     elsif !ARGV.length < 2
+#        puts "Welcome! This is My Recipe App!"
+#      end
+#  end
 
-puts "Hi, #{name}. This program gives you recipes that match the foods you have available in your kitchen. Let's get started!"
+#  puts greeting(ARGV)
+puts "Welcome to My recipe App\nThis program gives you recipes you can make with food you have available in your kitchen. Let's get started!"
 
-puts "What food do you have available in your kitchen? List main ingredients such as: cheese, pasta, etc."
-main_ingredients = gets.chomp.to_s
 
-puts "Are you vegan? Type y for yes or n for no"
-vegan = gets.chomp.to_s
-
-puts "Are you gluten free? Type y for yes or n for no"
-gf = gets.chomp.to_s
+#Main ingredients
+puts "What food do you have available in your kitchen? List your main ingredients:"
+main_ingredients = gets.chomp.to_s 
 
 # Check if main ingredients are in ingredients in recipe
 
@@ -40,13 +44,21 @@ i = 0
          if ingredients_in_recipes.include?(main_ingredients)
              puts "Great, we might have some recipes to match your food"
          else
-             puts "Sorry, I am afraid we o not have recipes available that match your food"
+             puts "Sorry, I am afraid we do not have recipes available that match your food"
          end
          break
      end  
  end
 
  puts ingredientsmatch(main_ingredients)
+
+#Dietary restrictions
+
+puts "Are you vegan? Type y for yes or n for no"
+vegan = gets.chomp.to_s
+
+puts "Are you gluten free? Type y for yes or n for no"
+gf = gets.chomp.to_s
 
 #START METHOD 1 
 
@@ -108,7 +120,14 @@ Instructions:
         {
             :name => "cheese" "carrot" "pasta", 
             :non_vegan => "cheese + carrot", 
-            :non_gf => "pasta"
+            :non_gf => "pasta",
+            :recipe => 
+"prep time: 20 min
+Instructions: 
+- peel carrots
+- shred carrot 
+- Make pasta and mix"
+
         },
         {
             :name => "cheese steak",  
