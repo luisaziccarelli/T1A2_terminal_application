@@ -8,22 +8,26 @@ a = Artii::Base.new :font => 'slant'
 puts a.asciify("My Recipe App").colorize(:light_blue)
 
 
-
 #Welcome message
-# #def greeting(name) 
-# name = ARGV 
-#     if ARGV.length < 2
-#      puts "Welcome #{ARGV[0]}. This is My Recipe App!"
-#     elsif !ARGV.length < 2
-#        puts "Welcome! This is My Recipe App!"
-#      end
-#  end
+def greeting(name) 
 
-#  puts greeting(ARGV)
-puts "Welcome to My recipe App\nThis program gives you recipes you can make with food you have available in your kitchen. Let's get started!"
+name = ARGV 
+
+while ARGV == name
+    if ARGV.length < 2  
+        puts "Welcome #{ARGV[0]}. This is My Recipe App!"
+    else
+        puts "Welcome! This is My Recipe App!"
+    end
+    end
+end
+
+puts greeting(ARGV)
+
+#puts "Welcome to My recipe App\nThis program gives you recipes you can make with food you have available in your kitchen. Let's get started!"
 
 #Main ingredients
-puts "Here's a list of food items typically found in most people's kitchen. \n veggies, chicken, cheese, pasta, bread, eggs.\n Type: \n 1= yes, you have these items and wish to continue, \n 2= no, you don't have these items but wish to continue, \n 3= to exit the program"
+puts "Here's a list of food items typically found in most people's kitchen. \n variety of veggies, chicken, cheese, pasta, bread, eggs.\n Type: \n 1= yes, you have these items and wish to continue, \n 2= no, you don't have these items but wish to continue, \n 3= to exit the program"
 main_ingredients = gets.chomp.to_i
 
 case main_ingredients
@@ -132,8 +136,8 @@ diet_combinations(vegan, gf)
 
  def choiceofrecipe(vegan, gf)   
 
-    recipes = [
-         {
+recipes = [
+        {
              :name => "Easy macaroni and cheese", 
              :non_vegan => "cheese", 
              :non_gf => "pasta",
@@ -205,92 +209,30 @@ Instructions:
 4. Roast for 35-40 minutes, or until vegetables are golden and crispy
 5. Remove the vegetables from the oven and allow to cool slightly. 
 6. Transfer to a serving platter or a wooden board and sprinkle with the crushed walnuts and fresh herbs" 
-
          }
      ]  
-
-
-
-# #    recipes = [
-#         {
-#             :name => "steak sandwich", 
-#             :non_vegan => "steak", 
-#             :non_gf => "bread",
-#             :recipe => 
-# "prep time: 20 min
-# Instructions: 
-#     - Make steak 
-#     - Toast bread"
-
-#         },
-#         {
-#             :name => "cheese" + " " "carrot" + " " "pasta", 
-#             :non_vegan => "cheese + carrot", 
-#             :non_gf => "pasta",
-#             :recipe => 
-# "prep time: 20 min
-# Instructions: 
-# - peel carrots
-# - shred carrot 
-# - Make pasta and mix"
-
-#         },
-#         {
-#             :name => "cheese steak",  
-#             :non_vegan => "cheese", 
-#             :gf => "steak",
-#             :recipe =>
-# "prep time: 20 min
-# Instructions: 
-# - fry steak
-# - add cheese"
-
-#         },
-#         {
-#             :name => "apple sandwich", 
-#             :vegan => "apple", 
-#             :non_gf => "bread",
-#             :recipe =>
-# "prep time: 20 min
-# Instructions: 
-# - peel apples
-# - toast bread"
-#         },
-#         {
-#             :name => "apple carrot salad", 
-#             :vegan => "apple", 
-#             :gf => "carrot",
-#             :recipe => 
-# "prep time: 20 min
-# Instructions: 
-# - peel carrots
-# - peel apples
-# - mix" 
-
-#         }
-#     ]  
 
 i = 0
 
 while (i < recipes.length)
     if (vegan == "y") && (gf == "y")
         if !recipes[i].has_key?(:non_vegan) && !recipes[i].has_key?(:non_gf)
-            puts "Your recipe is #{recipes[i][:name].colorize(:light_blue)}"
+            puts "Your recipe is #{recipes[i][:name].colorize(:blue)}"
             puts "#{recipes[i][:recipe].colorize(:light_blue)}"
         end
     elsif !(vegan == "y") && !(gf == "y")
         if !recipes[i].has_key?(:vegan) && !recipes[i].has_key?(:gf)
-            puts "Your recipe is #{recipes[i][:name].colorize(:light_blue)}"
+            puts "Your recipe is #{recipes[i][:name].colorize(:blue)}"
             puts "#{recipes[i][:recipe].colorize(:light_blue)}"
         end
     elsif (vegan == "y")
         if !recipes[i].has_key?(:non_vegan)
-            puts "Your recipe is #{recipes[i][:name].colorize(:light_blue)}"
+            puts "Your recipe is #{recipes[i][:name].colorize(:blue)}"
             puts "#{recipes[i][:recipe].colorize(:light_blue)}"
         end
     elsif (gf == "y")
         if !recipes[i].has_key?(:non_gf)
-            puts "Your recipe is #{recipes[i][:name].colorize(:light_blue)}"
+            puts "Your recipe is #{recipes[i][:name].colorize(:blue)}"
             puts "#{recipes[i][:recipe].colorize(:light_blue)}"
         end
     end
