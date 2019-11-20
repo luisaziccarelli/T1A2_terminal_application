@@ -23,6 +23,6 @@ My recipe app was tested to ensure all the main 3 features implemented are perfo
 |                  | dietary restrictions.                  | 3. cheese steak,     | Passed  |
 |                  |                                        | apple carrot salad   |         |
 |                  |                                        | 4. steak sandwich,   | Passed  |
-|                  |                                        | cheese carrot pasta  |         | 
-                
+|                  |                                        | cheese carrot pasta  |         |  
+|                  |                                        |                      |         |
                                                       
