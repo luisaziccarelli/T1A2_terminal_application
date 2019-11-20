@@ -43,7 +43,6 @@ end  while main_ingredients == 3
  
 
 
-
 # Check if main ingredients are in ingredients in recipe
 
 # #def ingredientsmatch(main_ingredients)
@@ -66,13 +65,15 @@ end  while main_ingredients == 3
 #Dietary restrictions
 
 puts "Are you vegan? Type y for yes or n for no"
-vegan = gets.chomp.to_s
+vegan = gets.chomp.to_s.downcase.delete(" ")
 
 def vegan(vegan)
     if vegan == "y"  
         puts "you are vegan"
      elsif vegan == "n"  
-        puts "you are not vegan" 
+        puts "you are not vegan"
+     else
+        puts "Invalid option. Type y or n"
      end
 end
 
@@ -83,13 +84,15 @@ rescue TypeError
 end 
 
 puts "Are you gluten free? Type y for yes or n for no"
-gf = gets.chomp.to_s
+gf = gets.chomp.to_s.downcase.delete(" ")
 
 def gf(gf)
     if gf == "y"  
         puts "you are gluten free"
     elsif gf == "n"  
         puts "you are not gluten free"
+    else 
+        puts "invalid option. Type y or n"
     end
 end
 
@@ -136,12 +139,12 @@ def diet_combinations(vegan, gf)
     elsif (vegan == "n") && (gf == "y")
         puts "So you are only gluten free"
     else 
-        puts "you are just one of them"
+        puts "We were unable to determine your dietary restriction"
     end   
 end 
 
-diet_combinations(vegan, gf)
 
+diet_combinations(vegan, gf)
 
 # START METHOD 2: Selecting recipes 
 
