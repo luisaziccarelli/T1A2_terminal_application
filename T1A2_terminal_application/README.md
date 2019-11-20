@@ -13,7 +13,7 @@ A basic recipe app that gives you recipe options based on the most commonly foun
 
 - Click the link below and clone the Recipe App git repository to your local computer. You can find Clone or download green tab located on the right upper corner of the repository.
 
-https://github.com/luisaziccarelli/T1A2_terminal_application.git 
+    https://github.com/luisaziccarelli/T1A2_terminal_application.git 
 
 - Users has the flexibility to receive a customised welcome message if they choose to enter their name when they try to run My recipe App in the terminal, e.g. 'ruby recipeapp.rb username'. Alternatively, a generic welcome message will display if there is no specific username input.
 
