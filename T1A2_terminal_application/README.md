@@ -126,8 +126,11 @@ https://github.com/luisaziccarelli/T1A2_terminal_application.git
 
 # Project Management
 
-- The project management tool used for this project was Trello, which demostrates the project planning status, tasks breakdown and prioritization, and deadlines. Below are some screenshots of the Trello board for this project: 
+- The project management tool used for this project was Trello, which ilustrates the project planning status, tasks breakdown and prioritization, and deadlines. Check the Trello board for this project by clicking on this link: https://trello.com/b/IHXfd7cY/t1a2terminalapplication
 
+Below are some screenshots of the Trello board for this project: 
+
+![Image of Control Flow Diagram](screenshot1_14nov.jpg)
 
 
 # Project Package
