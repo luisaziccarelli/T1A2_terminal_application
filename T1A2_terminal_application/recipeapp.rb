@@ -42,40 +42,22 @@ case main_ingredients
 end  while main_ingredients == 3
  
 
-
-# Check if main ingredients are in ingredients in recipe
-
-# #def ingredientsmatch(main_ingredients)
-
-# ingredients_in_recipes = [ "bread", "milk" , "cheese" , "apples" , "carrots" , "steak" , "pasta" ] 
-
-# i = 0
-#      for i in ingredients_in_recipes
-#          if ingredients_in_recipes.include?(main_ingredients)
-#              puts "Great, we might have some recipes to match your food"
-#          else  
-#              puts "Sorry, I am afraid we do not have recipes available that match your food"
-#          end
-#          break 
-#      end
-# end  
-
-# puts ingredientsmatch(main_ingredients)
-
 #Dietary restrictions
 
 puts "Are you vegan? Type y for yes or n for no"
 vegan = gets.chomp.to_s.downcase.delete(" ")
 
+
+#this works without invalid option allowing loop
 def vegan(vegan)
     if vegan == "y"  
         puts "you are vegan"
-     elsif vegan == "n"  
-        puts "you are not vegan"
-     else
-        puts "Invalid option. Type y or n"
+    elsif vegan == "n"  
+         puts "you are not vegan"
+    else
+         puts "Invalid option. Type y or n"
      end
-end
+ end
 
 begin
     vegan(vegan)  
@@ -103,7 +85,7 @@ rescue TypeError
 end 
 
 
-#START METHOD 1- vegan or gf
+#START METHOD 1- vegan or gf combined
 
 #def veganorgf (vegan,gf)
 
