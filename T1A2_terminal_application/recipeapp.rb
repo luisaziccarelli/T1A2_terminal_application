@@ -39,7 +39,9 @@ case main_ingredients
 
  begin 
      main_ingredients = gets.chomp.to_i
- end while main_ingredients == 3 
+end  while main_ingredients == 3
+ 
+
 
 
 # Check if main ingredients are in ingredients in recipe
@@ -66,31 +68,61 @@ case main_ingredients
 puts "Are you vegan? Type y for yes or n for no"
 vegan = gets.chomp.to_s
 
-puts "Are you gluten free? Type y for yes or n for no"
-gf = gets.chomp.to_s
-
-#START METHOD 1- vegan or gf
-
-def veganorgf (vegan,gf)
-
+def vegan(vegan)
     if vegan == "y"  
         puts "you are vegan"
-     elsif  !vegan == "y"  
+     elsif vegan == "n"  
         puts "you are not vegan" 
-     elsif gf  == "y"  
-        puts "you are gluten free"
-     elsif !gf  == "y"  
-        puts "you are not gluten free"
      end
 end
 
-# begin rescue here 
-
 begin
-    veganorgf(vegan,gf)    
+    vegan(vegan)  
 rescue TypeError
     puts "TypeError handled"
 end 
+
+puts "Are you gluten free? Type y for yes or n for no"
+gf = gets.chomp.to_s
+
+def gf(gf)
+    if gf == "y"  
+        puts "you are gluten free"
+    elsif gf == "n"  
+        puts "you are not gluten free"
+    end
+end
+
+begin
+    gf(gf)    
+rescue TypeError
+    puts "TypeError handled"
+end 
+
+
+#START METHOD 1- vegan or gf
+
+#def veganorgf (vegan,gf)
+
+    # if vegan == "y"  
+    #     puts "you are vegan"
+    #  elsif  !vegan == "y"  
+    #     puts "you are not vegan" 
+#       elsif gf  == "y"  
+#          puts "you are gluten free"
+#      elsif !gf  == "y"  
+#         puts "you are not gluten free"
+#      end
+# end
+
+# begin rescue here 
+
+#begin
+#     veganorgf(vegan,gf)    
+# rescue TypeError
+#     puts "TypeError handled"
+# end 
+
 
 #Combinations of dietary restrictions    
 def diet_combinations(vegan, gf)
