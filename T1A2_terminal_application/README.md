@@ -114,6 +114,11 @@ When I started coding the first roadblock I found was when I was creating the co
 
 All three main feautures outlined in my development plan were implemented. Even though they ended up being implemented in a much less simple and sofisticated way that I originally intended, these feature comply with the must have programming concepts and structures required for this project (e.g. variables, loops, conditional control structures, error handling, error handling, input and output, ARGV, command line arguments, and Ruby Gems).
 
+# Manual error handling tests
+- As part of the test application I also manually tested the application ran as expected if minor errors were to occur. See the below screenshot of these potential erros and how they were handled.  
+
+![Image of screenshot for error handling](Screenshot_manualerrorhandling.png)
+
 # Developer Operations 
 
 - Github was utilized as a source control throughout the development of this application, with a total of X commits, which were pushed into a remote repository. Please refer to the link below:
