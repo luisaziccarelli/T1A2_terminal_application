@@ -130,8 +130,11 @@ https://github.com/luisaziccarelli/T1A2_terminal_application.git
 
 Below are some screenshots of the Trello board for this project: 
 
-![Image of Control Flow Diagram](screenshot1_14nov.jpg)
+![Image of Trello Board](screenshot1_14nov.jpg)
 
+![Image of Trello Board](screenshot2_16nov.jpg)
+
+![Image of Trello Board](screenshot3.1_20nov.jpg)
 
 # Project Package
 
