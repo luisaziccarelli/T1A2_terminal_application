@@ -23,24 +23,24 @@ puts a.asciify("My Recipe App").colorize(:light_blue)
 puts "Welcome to My recipe App\nThis program gives you recipes you can make with food you have available in your kitchen. Let's get started!"
 
 #Main ingredients
-puts "Here's a list of food items typically found in most people's kitchen. \n bread, milk , cheese , apples , carrots , steak , pasta.\n Type: \n 0= yes, you have these items and wish to continue, \n 1= no, you don't have these items but wish to continue, \n 2= to exit the program"
+puts "Here's a list of food items typically found in most people's kitchen. \n bread, milk , cheese , apples , carrots , steak , pasta.\n Type: \n 1= yes, you have these items and wish to continue, \n 2= no, you don't have these items but wish to continue, \n 3= to exit the program"
 main_ingredients = gets.chomp.to_i
 
 case main_ingredients
-when 0
-    puts "Great, you already have some ingredients. Let's continue"
-when 1
-    puts "So you may not have the ingredients, but would like to continue anyways. Let's proceed"
-when 2
-    puts "You wished to exit the program. See you next time!"
-when 3...9
-    puts "Invalid option. Try again"
-end
+     when 1
+         puts "Great, you already have some ingredients. To continue press enter"
+     when 2
+         puts "So you may not have the ingredients, but would like to continue anyways. To continue press enter"
+     when 3
+         puts "You wished to exit the program. See you next time!"
+     else 
+         puts "Invalid option. Select 1, 2, or 3"
+ end
 
-begin 
-    main_ingredients = gets.chomp.to_i
-end while main_ingredients == 2 
-   
+ begin 
+     main_ingredients = gets.chomp.to_i
+ end while main_ingredients == 3 
+
 
 # Check if main ingredients are in ingredients in recipe
 
