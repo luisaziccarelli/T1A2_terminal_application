@@ -23,7 +23,7 @@ puts a.asciify("My Recipe App").colorize(:light_blue)
 puts "Welcome to My recipe App\nThis program gives you recipes you can make with food you have available in your kitchen. Let's get started!"
 
 #Main ingredients
-puts "Here's a list of food items typically found in most people's kitchen. \n bread, milk , cheese , apples , carrots , steak , pasta.\n Type: \n 1= yes, you have these items and wish to continue, \n 2= no, you don't have these items but wish to continue, \n 3= to exit the program"
+puts "Here's a list of food items typically found in most people's kitchen. \n veggies, chicken, cheese, pasta, bread, eggs.\n Type: \n 1= yes, you have these items and wish to continue, \n 2= no, you don't have these items but wish to continue, \n 3= to exit the program"
 main_ingredients = gets.chomp.to_i
 
 case main_ingredients
@@ -133,63 +133,142 @@ diet_combinations(vegan, gf)
  def choiceofrecipe(vegan, gf)   
 
     recipes = [
-        {
-            :name => "steak sandwich", 
-            :non_vegan => "steak", 
-            :non_gf => "bread",
-            :recipe => 
-"prep time: 20 min
+         {
+             :name => "Easy macaroni and cheese", 
+             :non_vegan => "cheese", 
+             :non_gf => "pasta",
+             :recipe => 
+"Prep time: 10 min
 Instructions: 
-    - Make steak 
-    - Toast bread"
+1. Bring a large pot of lightly salted water to a boil. 
+2. Cook macaroni in the boiling water, stirring occasionally until cooked through but firm to the bite, 8 minutes. Drain
+3. Melt butter in a saucepan over medium heat; stir in flour, salt, and pepper until smooth, about 5 minutes
+4. Slowly pour milk into butter-flour mixture while continuously stirring until mixture is smooth and bubbling, about 5 minutes
+5. Add Cheddar cheese to milk mixture and stir until cheese is melted, 2 to 4 minutes
+6. Fold macaroni into cheese sauce until coated"
 
-        },
-        {
-            :name => "cheese" + " " "carrot" + " " "pasta", 
-            :non_vegan => "cheese + carrot", 
-            :non_gf => "pasta",
-            :recipe => 
-"prep time: 20 min
-Instructions: 
-- peel carrots
-- shred carrot 
-- Make pasta and mix"
+         },
+         {
+             :name => "Egg Salad Sandwich", 
+             :non_vegan => "eggs", 
+             :non_gf => "bread",
+             :recipe => 
+ "Prep time: 30 min
+ Instructions:
+ 1. Bring a medium pot of water to a boil
+ 2. Gently lower in eggs one at a time and reduce to a simmer
+ 3. Cook 10 minutes, then submerge in ice water. Peel eggs, then chop and add to a large bowl
+ 4. Add mayonnaise, mustard, lemon juice, dill, and cayenne and season with salt and pepper
+ 5. Mash and stir until completely combined.
+ 6. Serve egg salad on toasted bread on top of Bibb leaves with mustard and mayo"
 
-        },
-        {
-            :name => "cheese steak",  
-            :non_vegan => "cheese", 
-            :gf => "steak",
-            :recipe =>
-"prep time: 20 min
-Instructions: 
-- fry steak
-- add cheese"
+         },
+         {
+             :name => "Tomato Basil Chicken Stew",  
+             :non_vegan => "chicken", 
+             :gf => "tomato + basil",
+             :recipe =>
+"Prep time: 25 min
+Instructions:
+1. Heat oil in a large stockpot over medium-high heat. Add onion, carrots and celery 
+2. Sauté for 7 minutes, stirring occasionally, until the onion is soft and translucent 
+3. Add garlic and sauté for an additional minute or two until fragrant
+4. Add in remaining ingredients, and stir to combine. Use a long spoon to crush the tomatoes 
+5. Bring to a boil, then reduce heat to medium-low and simmer partially-covered for 10 minutes
+6. Serve with freshly-grated Parmesan cheese"
 
-        },
-        {
-            :name => "apple sandwich", 
-            :vegan => "apple", 
-            :non_gf => "bread",
-            :recipe =>
-"prep time: 20 min
+         },
+         {
+             :name => "Crispy Cucumber Sandwiches", 
+             :vegan => "cucumber", 
+             :non_gf => "bread",
+             :recipe =>
+"Prep time: 10 min
+Instructions:
+ 1. Preheat a grill or panini pan over medium heat
+ 2. Brush the olive oil on one side of each slice of bread, then turn the slices over so that the oiled side is down
+ 3. On the dry side, add one tablespoonful of hummus to each piece of bread
+ 4. Next add a layer of olives and then add the cucumbers 
+ 5. Close the sandwich and place in the pan
+ 6. Cook for 4 to 5 minutes on each side, or until it begins to brown and grill marks begin to appear"
+         },
+         {
+             :name => "Classic veggie roasted salad", 
+             :vegan => "veggies" , 
+             :gf => "roasted salad",
+             :recipe => 
+"Prep time: 50 min
 Instructions: 
-- peel apples
-- toast bread"
-        },
-        {
-            :name => "apple carrot salad", 
-            :vegan => "apple", 
-            :gf => "carrot",
-            :recipe => 
-"prep time: 20 min
-Instructions: 
-- peel carrots
-- peel apples
-- mix" 
+1. Preheat the oven to 180C.
+2. Arrange the chopped vegetables on a lined baking tray and drizzle with olive oil 
+3. Season with salt and pepper to taste and place the baking tray into the oven 
+4. Roast for 35-40 minutes, or until vegetables are golden and crispy
+5. Remove the vegetables from the oven and allow to cool slightly. 
+6. Transfer to a serving platter or a wooden board and sprinkle with the crushed walnuts and fresh herbs" 
 
-        }
-    ]  
+         }
+     ]  
+
+
+
+# #    recipes = [
+#         {
+#             :name => "steak sandwich", 
+#             :non_vegan => "steak", 
+#             :non_gf => "bread",
+#             :recipe => 
+# "prep time: 20 min
+# Instructions: 
+#     - Make steak 
+#     - Toast bread"
+
+#         },
+#         {
+#             :name => "cheese" + " " "carrot" + " " "pasta", 
+#             :non_vegan => "cheese + carrot", 
+#             :non_gf => "pasta",
+#             :recipe => 
+# "prep time: 20 min
+# Instructions: 
+# - peel carrots
+# - shred carrot 
+# - Make pasta and mix"
+
+#         },
+#         {
+#             :name => "cheese steak",  
+#             :non_vegan => "cheese", 
+#             :gf => "steak",
+#             :recipe =>
+# "prep time: 20 min
+# Instructions: 
+# - fry steak
+# - add cheese"
+
+#         },
+#         {
+#             :name => "apple sandwich", 
+#             :vegan => "apple", 
+#             :non_gf => "bread",
+#             :recipe =>
+# "prep time: 20 min
+# Instructions: 
+# - peel apples
+# - toast bread"
+#         },
+#         {
+#             :name => "apple carrot salad", 
+#             :vegan => "apple", 
+#             :gf => "carrot",
+#             :recipe => 
+# "prep time: 20 min
+# Instructions: 
+# - peel carrots
+# - peel apples
+# - mix" 
+
+#         }
+#     ]  
 
 i = 0
 
