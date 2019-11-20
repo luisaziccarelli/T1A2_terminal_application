@@ -15,6 +15,8 @@ A basic recipe app that gives you recipe options based on the most commonly foun
 
 https://github.com/luisaziccarelli/T1A2_terminal_application.git 
 
+- Users has the flexibility to receive a customised welcome message if they choose to enter their name when they try to run My recipe App in the terminal, e.g. 'ruby recipeapp.rb username'. Alternatively, a generic welcome message will display if there is no specific username input.
+
 ##  Dependencies 
 
     - ruby 2.6.3p62 
@@ -52,14 +54,7 @@ There is no specific system/hardware requirement for this application.
 - Addional features: 
     - Feature 4:  **Prep time**  
     The program will also output an indication of the time it will take the user to make the meal.
-    - Feauture 5:  **Type of meal**            
-    Whether the user wants to make breakfast, lunch, or dinner.
-    - Feature 6: **Servings**     
-    Number of people the recipe would feed.
-    - Feature 7:  **Tools needed**    
-    The type of cooking tools the user would need to use in order to prepare the meal such as: saucepan. 
-    - Feature 8: **Extra ingredients**  
-    Additional ingredients other than the main ingredients that the user could have to implement the recipe, such as: condiments. 
+
 
 # User Interaction Experience 
 
