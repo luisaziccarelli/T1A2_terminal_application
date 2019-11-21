@@ -8,7 +8,8 @@ require 'artii'
 
 require "tty-box" 
 
-box = TTY::Box.frame ColorizedString["veggies , chicken, cheese, pasta, bread, eggs"].colorize(:yellow), padding: 3, align: :center
+#Box to display main_ingredients 
+box = TTY::Box.frame ColorizedString["veggies , chicken, cheese, pasta, bread, eggs"].colorize(:yellow), padding: 1, align: :center  
 
 a = Artii::Base.new :font => 'slant'
 puts a.asciify("My Recipe App").colorize(:light_blue)
@@ -193,22 +194,22 @@ i = 0
 while (i < recipes.length)
     if (vegan == "y") && (gf == "y")
         if !recipes[i].has_key?(:non_vegan) && !recipes[i].has_key?(:non_gf)
-            puts "Your recipe is #{recipes[i][:name].colorize(:blue)}"
+            puts "Your recipe is #{recipes[i][:name].colorize(:yellow)}"
             puts "#{recipes[i][:recipe].colorize(:light_blue)}"
         end
     elsif !(vegan == "y") && !(gf == "y")
         if !recipes[i].has_key?(:vegan) && !recipes[i].has_key?(:gf)
-            puts "Your recipe is #{recipes[i][:name].colorize(:blue)}"
+            puts "Your recipe is #{recipes[i][:name].colorize(:yellow)}"
             puts "#{recipes[i][:recipe].colorize(:light_blue)}"
         end
     elsif (vegan == "y")
         if !recipes[i].has_key?(:non_vegan)
-            puts "Your recipe is #{recipes[i][:name].colorize(:blue)}"
+            puts "Your recipe is #{recipes[i][:name].colorize(:yellow)}"
             puts "#{recipes[i][:recipe].colorize(:light_blue)}"
         end
     elsif (gf == "y")
         if !recipes[i].has_key?(:non_gf)
-            puts "Your recipe is #{recipes[i][:name].colorize(:blue)}"
+            puts "Your recipe is #{recipes[i][:name].colorize(:yellow)}"
             puts "#{recipes[i][:recipe].colorize(:light_blue)}"
         end
     end
@@ -220,4 +221,4 @@ end
 puts choiceofrecipe(vegan, gf)
 
 #Goodbye message
-puts "Hope that you enjoy your meal and see you again soon!"
+puts "Hope you enjoy your meal! See you again soon!"
