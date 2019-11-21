@@ -121,7 +121,7 @@ When I started coding the first roadblock I found was when I was creating the co
 
 # Developer Operations 
 
-- Github was utilized as a source control throughout the development of this application, with a total of 30 commits, which were pushed into a remote repository. Please refer to the link below:
+- Github was utilized as a source control throughout the development of this application, with a total of 35 commits, which were pushed into a remote repository. Please refer to the link below:
 https://github.com/luisaziccarelli/T1A2_terminal_application.git
 
 # Project Management
@@ -140,4 +140,4 @@ Below are some screenshots of the Trello board for this project:
 
 - A bash scrip (my_script.sh) was written to run the application. All relevant ruby files are linked and gems were installed installed.
 
-Luisa Ziccarelli @ 2019
+*Luisa Ziccarelli @ 2019*
