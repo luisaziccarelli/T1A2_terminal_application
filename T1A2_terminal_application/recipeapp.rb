@@ -6,7 +6,8 @@ require 'colorized_string'
 
 require 'artii'
 
-require "tty-box" 
+require 'tty-box'
+
 
 #Box to display main_ingredients 
 box = TTY::Box.frame ColorizedString["veggies , chicken, cheese, pasta, bread, eggs"].colorize(:yellow), padding: 1, align: :center  
@@ -37,13 +38,13 @@ main_ingredients = gets.chomp.to_i
 
 case main_ingredients
       when 1
-          puts "Great, you already have some ingredients. To continue press enter"
+          print "Great, you already have some ingredients. To continue press enter"
       when 2
-          puts "So you may not have the ingredients, but would like to continue anyways. To continue press enter"
+          print "So you may not have the ingredients, but would like to continue anyways. To continue press enter"
       when 3
-          puts "You wished to exit the program. See you next time!"
+          print "You wished to exit the program. See you next time!"
       else  
-          puts "Invalid option. Select 1, 2, or 3" 
+          print "Invalid option. Select 1, 2, or 3" 
         end
 
 begin 
@@ -54,7 +55,6 @@ end while main_ingredients == "3"
 puts "Are you vegan? Type y for yes or n for no"
 vegan = gets.chomp.to_s.downcase.delete(" ")
 
-#this works without invalid option allowing loop
 def vegan(vegan)
     if vegan == "y"  
         puts "you are vegan"
@@ -107,7 +107,6 @@ def diet_combinations(vegan, gf)
     end   
 end 
 
-
 diet_combinations(vegan, gf)
 
 #Recipe selection and output method  
@@ -127,7 +126,6 @@ Instructions:
 4. Slowly pour milk into butter-flour mixture while continuously stirring until mixture is smooth and bubbling, about 5 minutes
 5. Add Cheddar cheese to milk mixture and stir until cheese is melted, 2 to 4 minutes
 6. Fold macaroni into cheese sauce until coated"
-
          },
          {
              :name => "Egg Salad Sandwich", 
@@ -142,7 +140,6 @@ Instructions:
  4. Add mayonnaise, mustard, lemon juice, dill, and cayenne and season with salt and pepper
  5. Mash and stir until completely combined.
  6. Serve egg salad on toasted bread on top of Bibb leaves with mustard and mayo"
-
          },
          {
              :name => "Tomato Basil Chicken Stew",  
@@ -157,7 +154,6 @@ Instructions:
 4. Add in remaining ingredients, and stir to combine. Use a long spoon to crush the tomatoes 
 5. Bring to a boil, then reduce heat to medium-low and simmer partially-covered for 10 minutes
 6. Serve with freshly-grated Parmesan cheese"
-
          },
          {
              :name => "Crispy Cucumber Sandwiches", 
@@ -187,7 +183,7 @@ Instructions:
 5. Remove the vegetables from the oven and allow to cool slightly. 
 6. Transfer to a serving platter or a wooden board and sprinkle with the crushed walnuts and fresh herbs" 
          }
-     ]  
+    ]  
 
 i = 0
 
