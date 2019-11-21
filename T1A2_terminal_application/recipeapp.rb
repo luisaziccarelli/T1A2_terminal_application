@@ -7,28 +7,26 @@ require 'artii'
 a = Artii::Base.new :font => 'slant'
 puts a.asciify("My Recipe App").colorize(:light_blue)
 
-
 #Welcome message
-def greeting(name) 
-
-name = ARGV 
-
-while ARGV == name
-    if ARGV.length < 2  
-        puts "Welcome #{ARGV[0]}. This is My Recipe App!"
+def greeting
+arr = ARGV
+name = ARGV[0]
+    if ARGV.length < 3
+        puts "Welcome #{ARGV[0]}! This is My Recipe App!"
     else
         puts "Welcome! This is My Recipe App!"
     end
-    end
 end
 
-puts greeting(ARGV)
+puts greeting
+ARGV.clear
 
-#puts "Welcome to My recipe App\nThis program gives you recipes you can make with food you have available in your kitchen. Let's get started!"
+puts "This program gives you recipe ideas with basic foods most people have available in their kitchen. Let's get started!"
 
 #Main ingredients
-puts "Here's a list of food items typically found in most people's kitchen. \n variety of veggies, chicken, cheese, pasta, bread, eggs.\n Type: \n 1= yes, you have these items and wish to continue, \n 2= no, you don't have these items but wish to continue, \n 3= to exit the program"
-main_ingredients = gets.chomp.to_i
+
+puts "Here's a list of food items typically found in most people's kitchen. \n veggies, chicken, cheese, pasta, bread, eggs\n Please type: \n 1= yes, you have these items and wish to continue, \n 2= no, you don't have these items but wish to continue, \n 3= to exit the program"
+main_ingredients = gets.chomp.to_i 
 
 case main_ingredients
      when 1
@@ -41,16 +39,14 @@ case main_ingredients
          puts "Invalid option. Select 1, 2, or 3"
  end
 
- begin 
+begin 
      main_ingredients = gets.chomp.to_i
-end  while main_ingredients == 3
+end while main_ingredients == 3
  
-
-#Dietary restrictions
+#Dietary restrictions -vegan
 
 puts "Are you vegan? Type y for yes or n for no"
 vegan = gets.chomp.to_s.downcase.delete(" ")
-
 
 #this works without invalid option allowing loop
 def vegan(vegan)
@@ -68,6 +64,8 @@ begin
 rescue TypeError
     puts "TypeError handled"
 end 
+
+#Dietary restrictions -gf
 
 puts "Are you gluten free? Type y for yes or n for no"
 gf = gets.chomp.to_s.downcase.delete(" ")
@@ -132,7 +130,7 @@ end
 
 diet_combinations(vegan, gf)
 
-# START METHOD 2: Selecting recipes 
+#Recipe selection and output method  
 
  def choiceofrecipe(vegan, gf)   
 
