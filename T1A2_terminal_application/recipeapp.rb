@@ -21,10 +21,10 @@ end
 puts greeting
 ARGV.clear
 
+#Brief description of the program
 puts "This program gives you recipe ideas with basic foods most people have available in their kitchen. Let's get started!"
 
 #Main ingredients
-
 puts "Here's a list of food items typically found in most people's kitchen. \n veggies, chicken, cheese, pasta, bread, eggs\n Please type: \n 1= yes, you have these items and wish to continue, \n 2= no, you don't have these items but wish to continue, \n 3= to exit the program"
 main_ingredients = gets.chomp.to_i 
 
@@ -44,7 +44,6 @@ begin
 end while main_ingredients == 3
  
 #Dietary restrictions -vegan
-
 puts "Are you vegan? Type y for yes or n for no"
 vegan = gets.chomp.to_s.downcase.delete(" ")
 
@@ -66,7 +65,6 @@ rescue TypeError
 end 
 
 #Dietary restrictions -gf
-
 puts "Are you gluten free? Type y for yes or n for no"
 gf = gets.chomp.to_s.downcase.delete(" ")
 
@@ -88,7 +86,6 @@ end
 
 
 #START METHOD 1- vegan or gf combined
-
 #def veganorgf (vegan,gf)
 
     # if vegan == "y"  
@@ -131,7 +128,6 @@ end
 diet_combinations(vegan, gf)
 
 #Recipe selection and output method  
-
  def choiceofrecipe(vegan, gf)   
 
 recipes = [
@@ -241,4 +237,5 @@ end
 
 puts choiceofrecipe(vegan, gf)
 
-
+#Goodbye message
+puts "Hope that you enjoy your meal and see you again soon!"
