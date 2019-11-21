@@ -83,11 +83,11 @@ https://drive.google.com/file/d/1SvOF-qzdGLOB5OC62fmNSPHBv_euI1Bx/view?usp=shari
 
 |Feautures           | Checklist                                         | Priority | Deadline    |
 |---                 |---                                                |---       |---          |
-| Main Ingredients   | Print to screen                                   |   High   |  15/11/19   |
+| Main Ingredients   | Print to screen basic ingredients                 |   High   |  15/11/19   |
 |                    | Get user input                                    |          |             |
 |                    | Create variable with user input                   |          |             |
 |                    | Create a method                                   |          |             |
-|Dietary Restrictions| Get input  (vegan, gf)                            |   High   |  15/11/19   |    
+|Dietary Restrictions| Get input  (vegan, gf)                            |   High   |  15/11/19   |   
 |                    | Create variable with user input                   |          |             |
 |                    | Create method that outputs their diet restriction |          |             |
 |                    | Create method that outputs possible combinations  |          |             |
