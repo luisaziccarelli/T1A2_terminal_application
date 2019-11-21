@@ -6,6 +6,10 @@ require 'colorized_string'
 
 require 'artii'
 
+require "tty-box" 
+
+box = TTY::Box.frame ColorizedString["veggies , chicken, cheese, pasta, bread, eggs"].colorize(:yellow), padding: 3, align: :center
+
 a = Artii::Base.new :font => 'slant'
 puts a.asciify("My Recipe App").colorize(:light_blue)
 
@@ -27,7 +31,7 @@ ARGV.clear
 puts "This program gives you recipe ideas with basic foods most people have available in their kitchen. Let's get started!"
 
 #Main ingredients
-puts "Here's a sample of food items typically found in most people's kitchen: \n"  + ColorizedString["veggies, chicken, cheese, pasta, bread, eggs\n"].colorize(:yellow) + "Please type: \n 1= yes, you have these items and wish to continue, \n 2= no, you don't have these items but wish to continue, \n 3= to exit the program" 
+puts "Here's a sample of food items typically found in most people's kitchen: \n"  + box + "Please type: \n 1= yes, you have these items and wish to continue, \n 2= no, you don't have these items but wish to continue, \n 3= to exit the program" 
 main_ingredients = gets.chomp.to_i 
 
 case main_ingredients
@@ -85,7 +89,6 @@ begin
 rescue TypeError
     puts "TypeError handled"
 end 
-
 
 #Combinations of dietary restrictions    
 def diet_combinations(vegan, gf)
