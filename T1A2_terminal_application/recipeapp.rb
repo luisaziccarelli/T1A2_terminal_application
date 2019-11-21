@@ -43,14 +43,15 @@ case main_ingredients
         print "So you may not have the ingredients, but would like to continue anyways. To continue press enter"
     when  3
         print "You wished to exit the program. See you next time!"
+        puts 
+        exit
     else  
         puts "Invalid option. Select 1, 2, or 3"
 end
 
 begin 
     main_ingredients = gets.chomp.to_i
-end while main_ingredients == 3 
-exit 
+end while main_ingredients == 1 | 2 | 3 
 
 
 #Dietary restrictions -vegan
