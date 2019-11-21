@@ -2,6 +2,8 @@
 
 require 'colorize'
 
+require 'colorized_string'
+
 require 'artii'
 
 a = Artii::Base.new :font => 'slant'
@@ -11,7 +13,7 @@ puts a.asciify("My Recipe App").colorize(:light_blue)
 def greeting
 arr = ARGV
 name = ARGV[0]
-    if ARGV.length < 3
+    if ARGV.length < 2
         puts "Welcome #{ARGV[0]}! This is My Recipe App!"
     else
         puts "Welcome! This is My Recipe App!"
@@ -25,23 +27,23 @@ ARGV.clear
 puts "This program gives you recipe ideas with basic foods most people have available in their kitchen. Let's get started!"
 
 #Main ingredients
-puts "Here's a list of food items typically found in most people's kitchen. \n veggies, chicken, cheese, pasta, bread, eggs\n Please type: \n 1= yes, you have these items and wish to continue, \n 2= no, you don't have these items but wish to continue, \n 3= to exit the program"
+puts "Here's a sample of food items typically found in most people's kitchen: \n"  + ColorizedString["veggies, chicken, cheese, pasta, bread, eggs\n"].colorize(:yellow) + "Please type: \n 1= yes, you have these items and wish to continue, \n 2= no, you don't have these items but wish to continue, \n 3= to exit the program" 
 main_ingredients = gets.chomp.to_i 
 
 case main_ingredients
-     when 1
-         puts "Great, you already have some ingredients. To continue press enter"
-     when 2
-         puts "So you may not have the ingredients, but would like to continue anyways. To continue press enter"
-     when 3
-         puts "You wished to exit the program. See you next time!"
-     else 
-         puts "Invalid option. Select 1, 2, or 3"
- end
+      when 1
+          puts "Great, you already have some ingredients. To continue press enter"
+      when 2
+          puts "So you may not have the ingredients, but would like to continue anyways. To continue press enter"
+      when 3
+          puts "You wished to exit the program. See you next time!"
+      else  
+          puts "Invalid option. Select 1, 2, or 3" 
+        end
 
 begin 
-     main_ingredients = gets.chomp.to_i
-end while main_ingredients == 3
+    main_ingredients = gets.chomp.to_i
+end while main_ingredients == "3"
  
 #Dietary restrictions -vegan
 puts "Are you vegan? Type y for yes or n for no"
@@ -83,29 +85,6 @@ begin
 rescue TypeError
     puts "TypeError handled"
 end 
-
-
-#START METHOD 1- vegan or gf combined
-#def veganorgf (vegan,gf)
-
-    # if vegan == "y"  
-    #     puts "you are vegan"
-    #  elsif  !vegan == "y"  
-    #     puts "you are not vegan" 
-#       elsif gf  == "y"  
-#          puts "you are gluten free"
-#      elsif !gf  == "y"  
-#         puts "you are not gluten free"
-#      end
-# end
-
-# begin rescue here 
-
-#begin
-#     veganorgf(vegan,gf)    
-# rescue TypeError
-#     puts "TypeError handled"
-# end 
 
 
 #Combinations of dietary restrictions    
