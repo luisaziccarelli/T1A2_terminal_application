@@ -37,20 +37,23 @@ puts "Here's a sample of food items typically found in most people's kitchen: \n
 main_ingredients = gets.chomp.to_i 
 
 case main_ingredients
-      when 1
-          print "Great, you already have some ingredients. To continue press enter"
-      when 2
-          print "So you may not have the ingredients, but would like to continue anyways. To continue press enter"
-      when 3
-          print "You wished to exit the program. See you next time!"
-      else  
-          print "Invalid option. Select 1, 2, or 3" 
-        end
+
+    when  1
+        print "Great, you already have some ingredients. To continue press enter"
+    when  2
+        print "So you may not have the ingredients, but would like to continue anyways. To continue press enter"
+    when  3
+        print "You wished to exit the program. See you next time!"
+    else  
+        puts "Invalid option. Select 1, 2, or 3"
+end
 
 begin 
     main_ingredients = gets.chomp.to_i
-end while main_ingredients == "3"
- 
+end while main_ingredients == 3 
+exit 
+
+
 #Dietary restrictions -vegan
 puts "Are you vegan? Type y for yes or n for no"
 vegan = gets.chomp.to_s.downcase.delete(" ")
