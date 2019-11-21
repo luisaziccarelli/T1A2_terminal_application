@@ -37,7 +37,6 @@ puts "Here's a sample of food items typically found in most people's kitchen: \n
 main_ingredients = gets.chomp.to_i 
 
 case main_ingredients
-
     when  1
         print "Great, you already have some ingredients. To continue press enter"
     when  2
@@ -113,8 +112,7 @@ end
 diet_combinations(vegan, gf)
 
 #Recipe selection and output method  
- def choiceofrecipe(vegan, gf)   
-
+def choiceofrecipe(vegan, gf)   
 recipes = [
         {
              :name => "Easy macaroni and cheese", 
