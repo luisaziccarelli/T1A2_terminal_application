@@ -140,3 +140,4 @@ Below are some screenshots of the Trello board for this project:
 
 - A bash scrip (my_script.sh) was written to run the application. All relevant ruby files are linked and gems were installed installed.
 
+Luisa Ziccarelli @ 2019
