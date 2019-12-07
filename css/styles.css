@@ -1,0 +1,11 @@
+body {
+    background-color: darkviolet;
+    font-size: 2em ;
+}
+
+p{
+    color: yellow;
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
