@@ -1,0 +1,30 @@
+@import "about";
+
+
+
+$my-favorite-red: red;
+
+body {
+    font-size: 20px;
+}
+
+section {
+    background-color: grey;
+
+     h1 {
+    font-size: 60px;
+    }
+    
+    h1:hover {
+    color:$my-favorite-red;
+    }
+    
+    p {
+    font-style: italic;
+    }
+
+    p span {
+    color:$my-favorite-red;
+    }
+}
+
