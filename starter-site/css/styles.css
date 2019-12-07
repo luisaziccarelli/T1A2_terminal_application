@@ -1,0 +1,44 @@
+body {
+  background-color: #2a752a;
+}
+
+
+title {
+    font-size: 2em;
+    font-stretch: normal;
+    color: white
+}
+
+img {
+    border-image: 5em;
+    height: 150px;
+    width: 150px;
+}
+
+#container {
+        font-display: center;
+        color: white;
+        font-size: 1rem;
+        height: 50px;
+        width: 50%;
+        margin-top: 1%;
+        margin-left: 1%;
+        border-image-width: 5%;
+}
+
+#landing {
+  font-display: center;
+  background-size: cover;
+  height: 10vh;
+  width: 10%;
+}
+
+.titles {
+  font-display: center;
+  margin-top: 5%;
+  margin-left: 5%;
+  color: white;
+  font-size: 1rem;
+  border-image-width: 5%
+}
+
